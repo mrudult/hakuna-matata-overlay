@@ -1,4 +1,4 @@
-<?php 
+<?php
 require( __DIR__.'/facebook_start.php' );
 $text = htmlspecialchars($_POST['text']);
 //echo $text;
@@ -13,7 +13,7 @@ function upload($path,$token,$fb,$text)
 	$image = [
 	  'caption' => $text,
 	  'source' => $fb->fileToUpload($path),
-	  
+
 	];
 
 	try {
@@ -64,7 +64,7 @@ session_write_close();
 <img src=<?php echo $bg_path?> class="bg">
 <div class="container">
     <div class="row">
-      
+
       <div class="header">
       	<h1>Thank you for your support!</h1>
         <img class="profile" src=<?php echo $path ?> alt="">
@@ -79,7 +79,7 @@ session_write_close();
 		  <li><a href="http://www.reddit.com/submit?url=http%3A%2F%2Fisupportnetneutrality.in%2F&title=Show%20your%20support%20for%20Net%20Neutralty" target="_blank" title="Submit to Reddit"><img src="images/simple_icons_black/Reddit.png"></a></li>
 		  <li><a href="mailto:?subject=Show%20your%20support%20for%20Net%20Neutralty&body=Let%20us%20show%20our%20support%20for%20Net%20Neutrality%20by%20changing%20our%20facebook%20profile%20picture:%20http%3A%2F%2Fisupportnetneutrality.in%2F" target="_blank" title="Email"><img src="images/simple_icons_black/Email.png"></a></li>
 		</ul>
-      
+
       </div>
       <div class="footer"><a href='https://github.com/ashwin47/Net-Neutral'>Made</a> by <a href="http://twitter.com/ashwinm">@ashwinm</a> </div>
     </div>

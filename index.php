@@ -2,15 +2,12 @@
 
   require( __DIR__.'/facebook_start.php' );
   require( __DIR__.'/cred.php' );
- 
   $helper = $fb->getRedirectLoginHelper();
- 
-  $permissions = ['email', 'user_posts','publish_actions']; // optional
-  #$callback_url    = 'http://isupportnetneutrality.in/login.php';
-  $loginUrl    = $helper->getLoginUrl($callback, $permissions);
-
+  $permissions     = ['email', 'user_posts','publish_actions']; // optional
+  $callback_url    = 'http://www.aarohiworld.com/overlay/login.php';
+  $loginUrl        = $helper->getLoginUrl($callback_url, $permissions);
+  $bg_path         = 'images/overlay320n.png';
   ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +23,6 @@
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link href="css/custom.css" rel="stylesheet">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,16 +34,14 @@
     <img src=<?php echo $bg_path?> class="bg">
     <div class="container">
       <div class="row">
-        
         <div class="header">
-          <h1>Show your support for Net Neutrality</h1>
+          <h1>Show your support for Aarohi VNIT</h1>
           <img class="profile" src="images/arjun.jpg"/>
         </div>
         <div class="content">
         <br/>
-        <p>Show your support for Net Neutrality by updating your facebook picture. </p>       
-          <a class="button button-primary" href=<?php echo htmlspecialchars($loginUrl);?> > Log in to Facebook </a> 
-       
+        <p>Show your support for Aarohi VNIT by updating your facebook picture. </p>
+          <a class="button button-primary" href=<?php echo htmlspecialchars($loginUrl);?> > Log in to Facebook </a>
        </div>
         <ul class="share-buttons">
           <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fisupportnetneutrality.in%2F&t=Show%20your%20support%20for%20Net%20Neutralty" title="Share on Facebook" target="_blank"><img src="images/simple_icons_black/Facebook.png"></a></li>
@@ -59,9 +53,7 @@
         <div class="pp"><a href="privacy-policy.html">Privacy policy</a></div>
         <a href='https://github.com/ashwin47/Net-Neutral'>Made</a> by <a href="http://twitter.com/ashwinm">@ashwinm</a>
         </footer>
-
       </div>
     </div>
-    
   </body>
 </html>
